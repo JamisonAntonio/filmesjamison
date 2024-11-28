@@ -97,8 +97,37 @@ function displayProfileData(profile) {
   document.getElementById('profile-instagram').href = profile.instagram;
 }
 
-// Carregar os dados do perfil ao carregar a página
+async function fetchFavoriteSeries() {
+  try {
+    const response = await fetch(`${JSON_SERVER_URL}/seriesFavoritas`);
+    const data = await response.json();
+    displayFavoriteSeries(data);
+  } catch (error) {
+    console.error('Erro ao buscar as séries favoritas:', error);
+  }
+}
+
+function displayFavoriteSeries(series) {
+  const container = document.getElementById('favorite-series-list');
+  container.innerHTML = '';
+  series.forEach(serie => {
+    container.innerHTML += `
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="https://image.tmdb.org/t/p/w500${serie.poster_path}" class="card-img-top" alt="${serie.title}">
+          <div class="card-body">
+            <h5 class="card-title">${serie.title}</h5>
+            <p class="card-text">${serie.overview.substring(0, 50)}...</p>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// Carregar os dados do perfil e das séries favoritas ao carregar a página
 fetchProfileData();
+fetchFavoriteSeries();
 
 
 
