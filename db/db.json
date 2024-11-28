@@ -2,13 +2,13 @@
   "perfil": [
     {
       "id": 1,
-      "nome": "Seu Nome",
-      "curso": "Curso de Desenvolvimento",
-      "email": "email@exemplo.com",
+      "nome": "Jamison Oliveira",
+      "curso": "Engenharia elétrica  - matéria Desenvolvimento de Interfaces Web",
+      "email": "jamisonao@hotmail.com ",
       "facebook": "https://facebook.com/seuperfil",
       "twitter": "https://twitter.com/seuperfil",
       "instagram": "https://instagram.com/seuperfil",
-      "bio": "Sou um estudante apaixonado por desenvolvimento web."
+      "bio": "Engenharia Elétrica na PUC Minas"
     }
   ],
   "seriesFavoritas": [

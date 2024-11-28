@@ -1,5 +1,25 @@
 const API_KEY = '70e168104f5129f470175c08c511751a';
 const BASE_URL = 'https://api.themoviedb.org/3';
+const JSON_SERVER_URL = 'http://localhost:3000';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function fetchFeaturedMovies() {
   const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
@@ -53,6 +73,35 @@ function populateCarousel(series) {
     `;
   });
 }
+
+
+
+
+async function fetchProfileData() {
+  try {
+    const response = await fetch(`${JSON_SERVER_URL}/perfil`);
+    const data = await response.json();
+    displayProfileData(data[0]); // Considera que só há um perfil no db.json
+  } catch (error) {
+    console.error('Erro ao buscar os dados do perfil:', error);
+  }
+}
+
+function displayProfileData(profile) {
+  document.getElementById('profile-name').innerText = profile.nome;
+  document.getElementById('profile-course').innerText = profile.curso;
+  document.getElementById('profile-email').innerText = profile.email;
+  document.getElementById('profile-bio').innerText = profile.bio;
+  document.getElementById('profile-facebook').href = profile.facebook;
+  document.getElementById('profile-twitter').href = profile.twitter;
+  document.getElementById('profile-instagram').href = profile.instagram;
+}
+
+// Carregar os dados do perfil ao carregar a página
+fetchProfileData();
+
+
+
 
 fetchFeaturedMovies();
 fetchNewReleases();

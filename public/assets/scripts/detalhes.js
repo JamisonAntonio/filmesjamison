@@ -34,24 +34,27 @@ async function fetchMovieCast(id) {
 
 function displayMovieCast(cast) {
   const carouselContent = document.getElementById('carousel-cast-content');
+  carouselContent.innerHTML = '';
   let active = true;
-  cast.forEach((actor, index) => {
+  for (let i = 0; i < cast.length; i += 4) {
     const isActive = active ? 'active' : '';
-    if (index % 5 === 0) {
-      carouselContent.innerHTML += `<div class="carousel-item ${isActive}"><div class="d-flex justify-content-around">`;
-      active = false;
-    }
+    active = false;
+    const castChunk = cast.slice(i, i + 4);
+    const castHTML = castChunk
+      .map(actor => `
+        <div class="col text-center">
+          <img src="https://image.tmdb.org/t/p/w200${actor.profile_path}" class="img-fluid rounded-circle mb-2" alt="${actor.name}">
+          <p class="mb-0"><strong>${actor.name}</strong></p>
+          <p class="text-muted small">${actor.character}</p>
+        </div>
+      `)
+      .join('');
     carouselContent.innerHTML += `
-      <div class="text-center mx-3">
-        <img src="https://image.tmdb.org/t/p/w200${actor.profile_path}" class="rounded-circle mb-2" alt="${actor.name}">
-        <p class="mb-0"><strong>${actor.name}</strong></p>
-        <p class="text-muted small">${actor.character}</p>
+      <div class="carousel-item ${isActive}">
+        <div class="row justify-content-center">${castHTML}</div>
       </div>
     `;
-    if (index % 5 === 4 || index === cast.length - 1) {
-      carouselContent.innerHTML += `</div></div>`;
-    }
-  });
+  }
 }
 
 async function addToFavorites(movie) {
