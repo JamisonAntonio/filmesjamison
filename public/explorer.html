@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar Séries Jamison</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">🎬 Portal de Séries Jamison</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="explorer.html">Explorar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="search" class="mb-5">
+      <h2 class="text-center">Procurar Séries</h2>
+      <div class="input-group mb-3">
+        <input type="text" id="search-query" class="form-control" placeholder="Digite o nome da série">
+        <button class="btn btn-primary" id="search-button">Buscar</button>
+      </div>
+    </section>
+
+    <section id="search-results" class="mb-5">
+      <h2 class="text-center">Resultados</h2>
+      <div id="search-results-cards" class="row"></div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; Um site de Séries de Jamison Antonio</p>
+  </footer>
+
+  <script src="assets/scripts/explorer.js"></script>
+</body>
+</html>

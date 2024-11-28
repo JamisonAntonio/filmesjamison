@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de séries jamison</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<br><br>
+
+
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">🎬 Portal de Séries Jamison</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="explorer.html">Explorar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+<br><br><br>
+
+
+
+  <main class="container my-5">
+
+
+    <section id="popular-series" class="mb-5">
+      <h2 class="text-center">Séries Populares carrosel</h2>
+      <div id="carouselPopular" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carousel-content"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopular" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPopular" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="movie-listing" class="mb-5">
+      <h2 class="text-center">Filmes em Destaque</h2>
+      <div class="row" id="movie-list">
+        <!-- Filmes serão carregados aqui dinamicamente -->
+      </div>
+    </section>
+
+<br><br><br><br>
+
+    <section id="profile" class="mb-5">
+      <h2 class="text-center">Informações do Aluno Jamison</h2>
+      <div id="profile-container" class="text-center">
+        
+
+
+<img src="assets/img/jamison.jpeg"width="200">
+
+        <p><strong>Nome:</strong> <span id="profile-name"> Jamison Oliveira </span></p>
+        
+
+
+        <p><strong>Curso:</strong> <span id="profile-course"> Engenharia elétrica  - matéria Desenvolvimento de Interfaces Web   
+
+
+        </span></p>
+        
+
+
+        <p><strong>Email:</strong> <span id="profile-email"> jamisonao@hotmail.com </span></p>
+        
+
+
+
+
+        <p><strong>Bio:</strong> <span id="profile-bio"> Engenharia Elétrica na PUC Minas</span></p>
+        <div>
+
+
+
+          <a id="profile-facebook" href="https://facebook.com/Jamison.Antonio" target="_blank" class="btn btn-primary btn-sm mx-1">Facebook</a>
+          
+
+
+          <a id="profile-instagram" href="https://www.instagram.com/jamison.a.oliveira/profilecard/?igsh=bmNmbWE1NG4ycHg0" target="_blank" class="btn btn-danger btn-sm mx-1">Instagram</a>
+        
+
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+<br><br>
+<br>
+    <section id="new-releases" class="mb-5">
+      <h2 class="text-center">Filmes Lançamentos</h2>
+      <div class="row" id="release-list">
+        <!-- Lançamentos serão carregados aqui dinamicamente -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; Um site de Séries de Jamison Antonio</p>
+  </footer>
+
+  <script src="assets/scripts/home.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
