@@ -1,0 +1,15 @@
+{
+  "perfil": [
+    {
+      "id": 1,
+      "nome": "Seu Nome",
+      "curso": "Curso de Desenvolvimento",
+      "email": "email@exemplo.com",
+      "facebook": "https://facebook.com/seuperfil",
+      "twitter": "https://twitter.com/seuperfil",
+      "instagram": "https://instagram.com/seuperfil",
+      "bio": "Sou um estudante apaixonado por desenvolvimento web."
+    }
+  ],
+  "seriesFavoritas": []
+}
