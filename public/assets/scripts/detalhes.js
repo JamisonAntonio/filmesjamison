@@ -6,7 +6,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get('id');
 
 async function fetchMovieDetails(id) {
-  const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=pt-BR`);
+  const response = await fetch(`${BASE_URL}/tv/${id}?api_key=${API_KEY}&language=pt-BR`);
   const data = await response.json();
   displayMovieDetails(data);
   fetchMovieCast(id);
@@ -27,7 +27,7 @@ function displayMovieDetails(movie) {
 }
 
 async function fetchMovieCast(id) {
-  const response = await fetch(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=pt-BR`);
+  const response = await fetch(`${BASE_URL}/tv/${id}/credits?api_key=${API_KEY}&language=pt-BR`);
   const data = await response.json();
   displayMovieCast(data.cast);
 }

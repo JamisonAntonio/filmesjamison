@@ -22,13 +22,13 @@ const JSON_SERVER_URL = 'http://localhost:3000';
 
 
 async function fetchFeaturedMovies() {
-  const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
+  const response = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
   const data = await response.json();
   displayMovies(data.results.slice(0, 10), 'movie-list'); // Mostrar apenas os 10 primeiros filmes
 }
 
 async function fetchNewReleases() {
-  const response = await fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}&language=pt-BR&page=1`);
+  const response = await fetch(`${BASE_URL}/tv/now_playing?api_key=${API_KEY}&language=pt-BR&page=1`);
   const data = await response.json();
   displayMovies(data.results.slice(0, 10), 'release-list'); // Mostrar apenas os 10 primeiros lançamentos
 }
