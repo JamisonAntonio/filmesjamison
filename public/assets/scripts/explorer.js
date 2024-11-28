@@ -1,9 +1,13 @@
 const API_KEY = '70e168104f5129f470175c08c511751a';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
+
+
+
+
 document.getElementById('search-button').addEventListener('click', async () => {
   const query = document.getElementById('search-query').value;
-  const response = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&language=pt-BR&query=${query}`);
+  const response = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&include_adult=false&language=pt-BR&query=${query}`);
   const data = await response.json();
   displaySearchResults(data.results);
 });

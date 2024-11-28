@@ -48,7 +48,7 @@ function displayMovies(movies, containerId) {
         <div class="card h-100">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="${movie.title}">
           <div class="card-body">
-            <h5 class="card-title">${movie.title}</h5>
+            <h5 class="card-title">${movie.name}</h5>
             <p class="card-text">${movie.overview.substring(0, 50)}...</p>
             <a href="detalhes.html?id=${movie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
