@@ -2,25 +2,6 @@ const API_KEY = '70e168104f5129f470175c08c511751a';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const JSON_SERVER_URL = 'http://localhost:3000';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function fetchFeaturedMovies() {
   const response = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
   const data = await response.json();
