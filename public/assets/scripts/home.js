@@ -1,6 +1,6 @@
 const API_KEY = "70e168104f5129f470175c08c511751a";
 const BASE_URL = "https://api.themoviedb.org/3";
-const JSON_SERVER_URL = "https://jamisonantonio.github.io/seriesjamison/db/db.json";
+const JSON_SERVER_URL = "http://localhost:3000";
 
 async function fetchFeaturedMovies() {
   const response = await fetch(
@@ -51,21 +51,27 @@ function populateCarousel(series) {
     const isActive = index === 0 ? "active" : "";
     carouselContent.innerHTML += `
       <div class="carousel-item ${isActive}">
+              <a href="detalhes.html?id=${serie.id}">
         <img src="https://image.tmdb.org/t/p/w500${serie.backdrop_path}" class="d-block w-100" alt="${serie.name}">
+        </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>${serie.name}</h5>
           <p>${serie.overview.substring(0, 50)}...</p>
         </div>
       </div>
+
+
+
+
     `;
   });
 }
 
 async function fetchProfileData() {
   try {
-    const response = await fetch(`${JSON_SERVER_URL}`);
+    const response = await fetch(`${JSON_SERVER_URL}/perfil`);
     const data = await response.json();
-    displayProfileData(data.perfil[0]); // Considera que só há um perfil no db.json
+    displayProfileData(data[0]); // Considera que só há um perfil no db.json
   } catch (error) {
     console.error("Erro ao buscar os dados do perfil:", error);
   }
@@ -83,9 +89,9 @@ function displayProfileData(profile) {
 
 async function fetchFavoriteSeries() {
   try {
-    const response = await fetch(`${JSON_SERVER_URL}`);
+    const response = await fetch(`${JSON_SERVER_URL}/seriesFavoritas`);
     const data = await response.json();
-    displayFavoriteSeries(data.seriesFavoritas);
+    displayFavoriteSeries(data);
   } catch (error) {
     console.error("Erro ao buscar as séries favoritas:", error);
   }
@@ -102,7 +108,7 @@ function displayFavoriteSeries(series) {
           <div class="card-body">
             <h5 class="card-title">${serie.title}</h5>
             <p class="card-text">${serie.overview.substring(0, 50)}...</p>
-            <a href="detalhes.html?id=${serie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
+            
           </div>
         </div>
       </div>
