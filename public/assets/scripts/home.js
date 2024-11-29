@@ -7,7 +7,7 @@ async function fetchFeaturedMovies() {
     `${BASE_URL}/tv/popular?api_key=${API_KEY}&language=pt-BR&page=1`,
   );
   const data = await response.json();
-  displayMovies(data.results.slice(0, 10), "movie-list"); // Mostrar apenas os 10 primeiros filmes
+  displayMovies(data.results.slice(0, 10), "movie-list"); // Mostrar apenas as 10 primeiras series
 }
 
 async function fetchNewReleases() {

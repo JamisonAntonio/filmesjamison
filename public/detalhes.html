@@ -1,71 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalhes do Filme</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-</head>
-<body>
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">🎬 Portal de Séries</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="explorer.html">Explorar</a></li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes da Série</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">🎬 Portal de Séries</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="explorer.html">Explorar</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="container my-5">
-    <section id="movie-details" class="mb-5">
-      <h2 class="text-center" id="movie-title"></h2>
-      <div class="row">
-        <div class="col-md-6">
-          <img id="movie-poster" class="img-fluid rounded" alt="Poster do Filme">
+    <main class="container my-5">
+      <section id="movie-details" class="mb-5">
+        <h2 class="text-center" id="movie-title"></h2>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              id="movie-poster"
+              class="img-fluid rounded"
+              alt="Poster da Série"
+            />
+          </div>
+          <div class="col-md-6">
+            <p><strong>Sinopse:</strong> <span id="movie-overview"></span></p>
+            <p>
+              <strong>Data de Lançamento:</strong>
+              <span id="movie-release"></span>
+            </p>
+            <p>
+              <strong>Idioma Original:</strong>
+              <span id="movie-language"></span>
+            </p>
+            <p><strong>Avaliação:</strong> <span id="movie-rating"></span></p>
+            <p>
+              <strong>Popularidade:</strong> <span id="movie-popularity"></span>
+            </p>
+            <button id="fav-btn" class="btn btn-primary">
+              Adicionar aos Favoritos</button
+            ><br /><br />
+            <div><a href="javascript:history.back()">Voltar</a></div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <p><strong>Sinopse:</strong> <span id="movie-overview"></span></p>
-          <p><strong>Data de Lançamento:</strong> <span id="movie-release"></span></p>
-          <p><strong>Idioma Original:</strong> <span id="movie-language"></span></p>
-          <p><strong>Avaliação:</strong> <span id="movie-rating"></span></p>
-          <p><strong>Popularidade:</strong> <span id="movie-popularity"></span></p>
-          <button id="fav-btn" class="btn btn-primary">Adicionar aos Favoritos</button><br><br>
-          <div><a href="javascript:history.back()">Voltar</a></div>
+      </section>
+
+      <section id="movie-cast" class="mb-5">
+        <h2 class="text-center">Elenco</h2>
+        <div id="carouselCast" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carousel-cast-content">
+            <!-- Elenco será carregado dinamicamente -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselCast"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselCast"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Portal de Séries - Todos os direitos reservados.</p>
+    </footer>
 
-    <section id="movie-cast" class="mb-5">
-      <h2 class="text-center">Elenco</h2>
-      <div id="carouselCast" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" id="carousel-cast-content">
-          <!-- Elenco será carregado dinamicamente -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCast" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselCast" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Portal de Séries - Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="assets/scripts/detalhes.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="assets/scripts/detalhes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
