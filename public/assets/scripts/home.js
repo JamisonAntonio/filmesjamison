@@ -102,7 +102,7 @@ function displayFavoriteSeries(series) {
           <div class="card-body">
             <h5 class="card-title">${serie.title}</h5>
             <p class="card-text">${serie.overview.substring(0, 50)}...</p>
-            <a href="detalhes.html?id=${serie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
+            <a href="detalhes.html?id=${movie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
         </div>
       </div>
