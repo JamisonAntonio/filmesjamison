@@ -1,6 +1,6 @@
 const API_KEY = "70e168104f5129f470175c08c511751a";
 const BASE_URL = "https://api.themoviedb.org/3";
-const JSON_SERVER_URL = "https://jamisonantonio.github.io/seriesjamison/db/db.json";
+const JSON_SERVER_URL = "http://localhost:3000";
 
 const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get("id");
