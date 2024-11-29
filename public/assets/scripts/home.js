@@ -1,6 +1,6 @@
 const API_KEY = "70e168104f5129f470175c08c511751a";
 const BASE_URL = "https://api.themoviedb.org/3";
-const JSON_SERVER_URL = "http://localhost:3000";
+const JSON_SERVER_URL = "https://jamisonantonio.github.io/seriesjamison/db/db.json";
 
 async function fetchFeaturedMovies() {
   const response = await fetch(
@@ -63,9 +63,9 @@ function populateCarousel(series) {
 
 async function fetchProfileData() {
   try {
-    const response = await fetch(`${JSON_SERVER_URL}/perfil`);
+    const response = await fetch(`${JSON_SERVER_URL}`);
     const data = await response.json();
-    displayProfileData(data[0]); // Considera que só há um perfil no db.json
+    displayProfileData(data.perfil[0]); // Considera que só há um perfil no db.json
   } catch (error) {
     console.error("Erro ao buscar os dados do perfil:", error);
   }
@@ -83,9 +83,9 @@ function displayProfileData(profile) {
 
 async function fetchFavoriteSeries() {
   try {
-    const response = await fetch(`${JSON_SERVER_URL}/seriesFavoritas`);
+    const response = await fetch(`${JSON_SERVER_URL}`);
     const data = await response.json();
-    displayFavoriteSeries(data);
+    displayFavoriteSeries(data.seriesFavoritas);
   } catch (error) {
     console.error("Erro ao buscar as séries favoritas:", error);
   }
@@ -102,7 +102,7 @@ function displayFavoriteSeries(series) {
           <div class="card-body">
             <h5 class="card-title">${serie.title}</h5>
             <p class="card-text">${serie.overview.substring(0, 50)}...</p>
-            
+            <a href="detalhes.html?id=${serie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
         </div>
       </div>
