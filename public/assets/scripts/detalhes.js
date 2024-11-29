@@ -16,7 +16,7 @@ function displayMovieDetails(movie) {
   document.getElementById('movie-title').innerText = movie.name;
   document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
   document.getElementById('movie-overview').innerText = movie.overview;
-  document.getElementById('movie-release').innerText = movie.release_date;
+  document.getElementById('movie-release').innerText = movie.first_air_date;
   document.getElementById('movie-language').innerText = movie.original_language;
   document.getElementById('movie-rating').innerText = movie.vote_average;
   document.getElementById('movie-popularity').innerText = movie.popularity;
