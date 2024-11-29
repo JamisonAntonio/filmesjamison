@@ -13,23 +13,19 @@
   ],
   "seriesFavoritas": [
     {
-      "id": 1241982,
-      "title": "Moana 2",
-      "poster_path": "/oEiuj2Iv4SUEEWx0FJCLjplNunA.jpg",
-      "overview": "Depois de receber um chamado inesperado de seus ancestrais navegadores, Moana vai viajar para mares distantes da Oceania, em águas perdidas em uma aventura perigosa.",
-      "release_date": "2024-11-27"
-    },
-    {
-      "id": 558449,
-      "title": "Gladiador 2",
-      "poster_path": "/342bly9MqveL65TnEFzx8TTUxcL.jpg",
-      "overview": "Anos depois de testemunhar a trágica morte do reverenciado herói Maximus nas mãos de seu tio malvado, Lucius se vê forçado a lutar no Coliseu depois que sua terra natal é conquistada por dois imperadores tirânicos, que agora governam Roma. Com o coração ardendo de raiva e o destino do Império pendurado por um fio, Lucius deve enfrentar perigos e inimigos, redescobrindo em seu passado a força e a honra necessárias para trazer a glória de Roma de volta ao seu povo. Prepare-se para uma jornada épica de coragem e vingança na sangrenta arena do Coliseu.",
-      "release_date": "2024-11-13"
-    },
-    {
       "id": 256121,
       "poster_path": "/lphvsr062SlxWM6XegsV2dLGaiE.jpg",
       "overview": ""
+    },
+    {
+      "id": 252373,
+      "poster_path": "/uptgxt2apx5wwWItQzqL0HwhjZC.jpg",
+      "overview": "Será o amor de Laura suficiente para curar o ódio de Miguel e a culpa de Tomás? Será ela capaz de escolher qual dos dois vai salvar?"
+    },
+    {
+      "id": 94722,
+      "poster_path": "/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg",
+      "overview": "Tagesschau é um serviço de notícias de televisão nacional e internacional alemão produzido pela equipe editorial da ARD-aktuell em nome da rede de televisão de serviço público alemão ARD"
     }
   ]
 }
