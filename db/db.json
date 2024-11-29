@@ -14,18 +14,23 @@
   "seriesFavoritas": [
     {
       "id": 256121,
+      "title": "Lavender Fields",
       "poster_path": "/lphvsr062SlxWM6XegsV2dLGaiE.jpg",
       "overview": ""
     },
     {
-      "id": 252373,
+      "id": 252373, 
+      "title": "A Promessa",
       "poster_path": "/uptgxt2apx5wwWItQzqL0HwhjZC.jpg",
       "overview": "Será o amor de Laura suficiente para curar o ódio de Miguel e a culpa de Tomás? Será ela capaz de escolher qual dos dois vai salvar?"
     },
     {
       "id": 94722,
+      "title": "Tagesschau",
       "poster_path": "/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg",
       "overview": "Tagesschau é um serviço de notícias de televisão nacional e internacional alemão produzido pela equipe editorial da ARD-aktuell em nome da rede de televisão de serviço público alemão ARD"
     }
   ]
 }
+
+

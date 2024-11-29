@@ -97,21 +97,26 @@ async function fetchFavoriteSeries() {
   }
 }
 
-function displayFavoriteSeries(series) {
+function displayFavoriteSeries(movies) {
   const container = document.getElementById("favorite-series-list");
   container.innerHTML = "";
-  series.forEach((serie) => {
+  movies.forEach((movie) => {
     container.innerHTML += `
-      <div class="col-md-3 mb-4">
+      <div class="col-md-2 mb-4">
         <div class="card h-100">
-          <img src="https://image.tmdb.org/t/p/w500${serie.poster_path}" class="card-img-top" alt="${serie.title}">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="${movie.title}">
           <div class="card-body">
-            <h5 class="card-title">${serie.title}</h5>
-            <p class="card-text">${serie.overview.substring(0, 50)}...</p>
-            
+            <h5 class="card-title">${movie.title}-</h5>
+            <p class="card-text">${movie.overview.substring(0, 50)}...</p>
+            <a href="detalhes.html?id=${movie.id}" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
         </div>
       </div>
+
+
+
+
+
     `;
   });
 }
